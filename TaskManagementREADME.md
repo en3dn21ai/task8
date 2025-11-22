@@ -1,35 +1,34 @@
 # Task Management System --- API Design
 
 ## 1. Project Structure
-
-1.  task-management-api/
-2.  ├── src/
-3.  │ ├── config/
-4.  │ │ └── db.js
-5.  │ ├── controllers/
-6.  │ │ ├── auth.controller.js
-7.  │ │ ├── user.controller.js
-8.  │ │ ├── project.controller.js
-9.  │ │ └── task.controller.js
-10. │ ├── models/
-11. │ │ ├── User.js
-12. │ │ ├── Project.js
-13. │ │ └── Task.js
-14. │ ├── routes/
-15. │ │ ├── auth.routes.js
-16. │ │ ├── user.routes.js
-17. │ │ ├── project.routes.js
-18. │ │ └── task.routes.js
-19. │ ├── middleware/
-20. │ │ ├── auth.js
-21. │ │ └── errorHandler.js
-22. │ ├── utils/
-23. │ │ ├── sendNotification.js
-24. │ │ └── validateRequest.js
-25. │ └── app.js
-26. ├── .env
-27. ├── package.json
-28. └── README.md
+  task-management-api/
+ ├── src/
+ │ ├── config/
+ │ │ └── db.js
+ │ ├── controllers/
+ │ │ ├── auth.controller.js
+ │ │ ├── user.controller.js
+ │ │ ├── project.controller.js
+ │ │ └── task.controller.js
+ │ ├── models/
+ │ │ ├── User.js
+ │ │ ├── Project.js
+ │ │ └── Task.js
+ │ ├── routes/
+ │ │ ├── auth.routes.js
+ │ │ ├── user.routes.js
+ │ │ ├── project.routes.js
+ │ │ └── task.routes.js
+ │ ├── middleware/
+ │ │ ├── auth.js
+ │ │ └── errorHandler.js
+ │ ├── utils/
+ │ │ ├── sendNotification.js
+ │ │ └── validateRequest.js
+ │ └── app.js
+ ├── .env
+ ├── package.json
+ └── README.md
 
 ## 2. Required Libraries (Enumerated with Explanation)
 
@@ -48,22 +47,21 @@
 7.  morgan
     -   Logs API requests for debugging and monitoring.
 8.  cookie-parser
-    -   Parses cookies when storing tokens in cookies (optional).
+    -   Parses cookies when storing tokens in cookies.
 9.  express-validator
     -   Validates user input in request bodies.
 10. nodemailer
     -   Sends email notifications for reminders or invitations
-        (optional).
 11. node-cron
-    -   Automates scheduled tasks like deadline reminders (optional).
+    -   Automates scheduled tasks like deadline reminders.
 
 ## 3. Database Models
 
 ### 3.1 User Model
 
 1.  name: String
-2.  email: String (unique)
-3.  password: String (hashed)
+2.  email: String
+3.  password: String
 4.  avatar: String
 5.  createdAt: Date
 
@@ -71,7 +69,7 @@
 
 1.  name: String
 2.  description: String
-3.  owner: ObjectId (User)
+3.  owner: ObjectId
 4.  members: Array of User ObjectId
 5.  createdAt: Date
 
