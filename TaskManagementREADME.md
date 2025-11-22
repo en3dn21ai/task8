@@ -31,7 +31,7 @@
 27. ├── package.json
 28. └── README.md
 
-## 2. Required Libraries (Enumerated with Explanation)
+## 2. Required Libraries
 
 1.  express
     -   Framework for building API routes and handling HTTP requests.
@@ -86,7 +86,7 @@
 8.  createdBy: ObjectId 
 9.  createdAt: Date
 
-## 4. API Endpoints (Enumeration)
+## 4. API Endpoints
 
 ### 4.1 Auth Endpoints
 
